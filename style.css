@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sec {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #111;
+}
+
+.sec h2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40vw;
+  color: #fff;
+  background: #000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+
+.sec.active h2 {
+  color: #000;
+  background: #fff;
+  mix-blend-mode: screen;
+}
+
+.sec video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sec .dot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: default;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.sec .dot::before {
+  content: 'Light Mode';
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  white-space: nowrap;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.sec .dot:active {
+  -webkit-box-shadow: 0 0 0 200vh #fff;
+          box-shadow: 0 0 0 200vh #fff;
+  border: 2px solid #000;
+}
+
+.sec .dot.active {
+  background: #000;
+  border: 2px solid #000;
+}
+
+.sec .dot.active:active {
+  -webkit-box-shadow: 0 0 0 200vh #000;
+          box-shadow: 0 0 0 200vh #000;
+  border: 2px solid #fff;
+}
+
+.sec .dot.active::before {
+  content: 'Dark Mode';
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */
